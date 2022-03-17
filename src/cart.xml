@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="red" class="kr.ac.kopo.Color">
+		<constructor-arg value="붉은색"></constructor-arg>	
+	</bean>
+	<bean id="blue" class="kr.ac.kopo.Color">
+		<constructor-arg value="파란색"></constructor-arg>	
+	</bean>
+	<bean id="winter" class="kr.ac.kopo.Wheel">
+		<constructor-arg value = "겨울용"></constructor-arg>
+	</bean>
+	<bean id="sonata" class="kr.ac.kopo.Type">
+		<constructor-arg value = "소나타"></constructor-arg>
+	</bean>
+	<bean id="cart" class="kr.ac.kopo.Cart">
+		<property name="color" ref="blue"></property>
+		<property name="wheel" ref="winter"></property>
+		<property name="type" ref="sonata"></property>
+	</bean>
+
+</beans>
